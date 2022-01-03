@@ -6,3 +6,17 @@ div[data-reactroot] {
   background-color: #F3F9F9;
   height: 100%;
 }
+
+.filter-container {
+  display: flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+
+  filter {
+    flex: 1 1 50%;
+  }
+
+  .create {
+    flex: 0 0 301px;
+  }
+}

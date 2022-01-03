@@ -8,34 +8,28 @@ module.exports = {
       },
       {
         key: 1,
-        name: 'Pages',
-        icon: 'user',
+        name: 'Menu',
+        icon: 'product',
         child: [
           {
-            name: 'Form',
+            name: 'Product',
             key: 102,
-            url: '/form'
+            url: '/product/list'
           },
           {
-            name: 'Table',
-            key: 103,
-            url: '/table'
+            name: 'Create Product',
+            key: 102,
+            subkey: 102,
+            url: '/product/create',
+            hidden: true,
           },
           {
-            name: 'Calendar',
-            key: 104,
-            url: '/calendar'
+            name: 'Edit Product',
+            key: 102,
+            subkey: 102,
+            url: '/product/edit',
+            hidden: true,
           },
-          {
-            name: 'Timeline',
-            key: 105,
-            url: '/timeline'
-          },
-          {
-            name: 'Steps',
-            key: 106,
-            url: '/steps'
-          }
         ]
       },
     ]

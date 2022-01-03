@@ -6,10 +6,10 @@ import { Route, Redirect } from 'react-router-dom';
 
 import { childRoutes } from '@/route';
 
-import NavPath from '@/components/NavPath';
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import Footer from '@/components/Footer';
+import NavPath from '@/components/common/NavPath';
+import Header from '@/components/common/Header';
+import Sidebar from '@/components/common/Sidebar';
+import Footer from '@/components/common/Footer';
 
 import './index.scss';
 
@@ -55,6 +55,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-function mapDispatchToProps(dispatch) {}
+function mapDispatchToProps(dispatch) {
+  return {}
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
