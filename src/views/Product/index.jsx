@@ -54,7 +54,7 @@ const ListProduct = () => {
   const onDelete = async (data) => {
     try {
       setLoading(true);
-      const result = await deleteProduct(data.id);
+      const result = await deleteProduct(data.product_id);
       if (result.code === 200) {
         Notification({ message: 'Delete Success', type: 'success' });
         await getData();
