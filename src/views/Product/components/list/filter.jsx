@@ -15,7 +15,7 @@ const Filter = (props) => {
   return (
     <div className='filter-container'>
       <div className='filter'>
-        <Category value={query.category_id} onChange={onChange} />
+        <Category value={query.category_id} onChange={(value) => onChange('category_id', value, true)} />
       </div>
       <div className='create'>
         <CreateSearch onSearch={(value) => onChange('keyword', value, true)} onClickCreate={clickCreate} />

@@ -16,7 +16,7 @@ const TableCommon = (props) => {
       } else if (sorter.order === 'descend') {
         onSort(sorter.field, 'DESC');
       } else {
-        onSort('product_id', 'ASC');
+        onSort('product_id', 'DESC');
       }
     }
   };
@@ -55,7 +55,7 @@ const TableCommon = (props) => {
         render={(text, record) => (
           <Space size='middle'>
             <Button className='ant-custom-btn' type='primary' size={size}>
-              <Link className='custom-btn primary ant-custom-btn ' size={size} to={'/product/edit?uuid=' + record.uuid}>
+              <Link className='custom-btn primary ant-custom-btn ' size={size} to={'/product/edit?product_id=' + record.product_id}>
                 <EditOutlined />
               </Link>
             </Button>

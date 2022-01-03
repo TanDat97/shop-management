@@ -8,15 +8,15 @@ export function fetchList(query) {
   })
 }
 
-export function fetchDetail(id) {
+export function fetchDetail(product_id) {
   return request({
-    url: process.env.MANAGEMENT_API + '/product/' + id,
+    url: process.env.MANAGEMENT_API + '/product/' + product_id,
     method: 'get'
   })
 }
 
 export function create(isEdit, data) {
-  const path = isEdit ? '/' + data.id : ''
+  const path = isEdit ? '/' + data.product_id : ''
   return request({
     url: process.env.MANAGEMENT_API + '/product' + path,
     method: isEdit ? 'put' : 'post',
@@ -24,9 +24,9 @@ export function create(isEdit, data) {
   })
 }
 
-export function deleteProduct(id) {
+export function deleteProduct(product_id) {
   return request({
-    url: process.env.MANAGEMENT_API + '/product/delete/' + id,
+    url: process.env.MANAGEMENT_API + '/product/delete/' + product_id,
     method: 'delete'
   })
 }

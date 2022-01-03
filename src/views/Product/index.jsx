@@ -13,7 +13,7 @@ const listQuery = {
   limit: 10,
   keyword: undefined,
   sort_by: 'product_id',
-  sort_dir: 'ASC',
+  sort_dir: 'DESC',
 };
 
 const ListProduct = () => {
@@ -35,7 +35,6 @@ const ListProduct = () => {
   };
 
   const handleChange = (key, value, resetPage = false) => {
-    console.log(key, value, )
     const newQuery = JSON.parse(JSON.stringify(query));
     newQuery[key] = value;
     if (resetPage) newQuery.page = 1;

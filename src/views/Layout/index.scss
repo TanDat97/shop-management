@@ -20,3 +20,16 @@ div[data-reactroot] {
     flex: 0 0 301px;
   }
 }
+
+.form-container {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #fefefe;
+}
+
+.portal {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}

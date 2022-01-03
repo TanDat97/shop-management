@@ -26,7 +26,7 @@ const Category = (props) => {
     show = 'name',
     mode,
     value,
-    onChange = () => {},
+    onChange,
     optionFilterProp = 'children',
     placeholder = '',
   } = props;
@@ -37,7 +37,7 @@ const Category = (props) => {
         loading={loading}
         mode={mode}
         value={value}
-        onChange={(a) => onChange('category_id', a, true)}
+        onChange={onChange}
         showSearch
         allowClear
         style={{ width: '100%', minWidth: '120px' }}
