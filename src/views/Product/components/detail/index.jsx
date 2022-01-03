@@ -74,13 +74,13 @@ const DetailProduct = (props) => {
           <div className='form-container'>
             <Row gutter={24}>
               <Col span={12}>
-                <Form.Item label='Name' name='name'>
-                  <Input placeholder='Name' />
+                <Form.Item label='Name' name='name' rules={[{ required: true, message: 'Please input product name!' }]}>
+                  <Input placeholder='Name' allowClear={true} />
                 </Form.Item>
               </Col>
               <Col span={6}>
-                <Form.Item label='Price' name='price'>
-                  <Input type='number' placeholder='Price' />
+                <Form.Item label='Price' name='price' rules={[{ required: true, message: 'Please input product price!' }]}>
+                  <Input type='number' placeholder='Price' allowClear={true} />
                 </Form.Item>
               </Col>
               <Col span={6}>
@@ -90,7 +90,7 @@ const DetailProduct = (props) => {
               </Col>
               <Col span={24}>
                 <Form.Item label='Description' name='description'>
-                  <Input placeholder='Description' />
+                  <Input placeholder='Description' allowClear={true} />
                 </Form.Item>
               </Col>
             </Row>
