@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import slug from 'slug';
 
 import { Form, Input, Row, Col, Skeleton, Spin } from 'antd';
 import SubmitBack from '@/components/action/SubmitBack';
@@ -56,6 +57,7 @@ const DetailProduct = (props) => {
     try {
       setLoading(true);
       const data = { ...formData, ...value };
+      data.slug = slug(data.name);
       const result = await create(isEdit, data);
       Notification({ message: 'Success', type: 'success' });
       history.push('/product/list');

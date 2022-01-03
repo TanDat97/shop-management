@@ -55,10 +55,8 @@ const ListProduct = () => {
     try {
       setLoading(true);
       const result = await deleteProduct(data.product_id);
-      if (result.code === 200) {
-        Notification({ message: 'Delete Success', type: 'success' });
-        await getData();
-      }
+      Notification({ message: 'Delete Success', type: 'success' });
+      await getData();
     } catch (err) {
       console.log(err);
       Notification({ message: 'Some thing went wrong!', type: 'error' });
